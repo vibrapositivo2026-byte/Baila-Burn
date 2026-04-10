@@ -1,177 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baila & Burn | Latin Dance Fitness Lucan</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <style>
-        .hero-bg {
-            background-image: url('hero.jpg');
-            background-size: cover;
-            background-position: center;
-        }
-        .instructora-card {
-            border: 8px solid #e11d8f;
-            box-shadow: 0 20px 40px rgba(225, 29, 143, 0.3);
-        }
-        .community-img {
-            transition: transform 0.4s ease;
-        }
-        .community-img:hover {
-            transform: scale(1.05);
-        }
-    </style>
-</head>
-<body class="bg-zinc-950 text-white">
-
-    <!-- NAV -->
-    <nav class="bg-black/95 backdrop-blur-md border-b border-white/10 sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-6 py-5">
-            <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
-                <div class="text-3xl font-black tracking-tighter text-pink-500">
-                    BAILA & BURN
-                </div>
-
-                <div class="flex items-center gap-8 text-sm font-medium">
-                    <a href="#about" class="hover:text-pink-400 transition">About Us</a>
-                    <a href="#instructora" class="hover:text-pink-400 transition">Instructor</a>
-                    <a href="#prices" class="hover:text-pink-400 transition">Prices</a>
-                    <a href="#contact" class="hover:text-pink-400 transition">Contact</a>
-                </div>
-
-                <!-- Botón en el nav que abre el formulario -->
-                <button onclick="showReservationModal()" 
-                        class="inline-block bg-white text-black font-bold px-8 py-4 rounded-full text-lg hover:bg-pink-500 hover:text-white transition shadow-xl">
-                    RESERVE YOUR SPOT
-                </button>
-            </div>
-        </div>
-    </nav>
-
-    <!-- HERO -->
-    <section class="hero-bg h-screen flex items-center relative">
-        <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/70"></div>
-        
-        <div class="absolute bottom-32 left-1/2 transform -translate-x-1/2 text-center z-10 px-6">
-            <p class="text-pink-400 uppercase tracking-[4px] text-base mb-2">LUCAN • EVERY THURSDAY 7:30PM</p>
-            <h1 class="text-6xl md:text-7xl font-black tracking-tighter leading-none text-white mb-4">BAILA & BURN</h1>
-            <p class="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto">
-                Latin Dance Fitness that makes you move, sweat and smile
-            </p>
-        </div>
-
-        <div class="absolute top-12 right-12 flex flex-col gap-6 z-20">
-            <a href="https://instagram.com/baila.burn" target="_blank" class="flex items-center gap-3 text-white hover:text-pink-400 transition group">
-                <i class="fab fa-instagram text-4xl group-hover:scale-110 transition"></i>
-                <span class="text-lg font-medium">Baila.Burn</span>
-            </a>
-            <a href="https://facebook.com/BailaBurn" target="_blank" class="flex items-center gap-3 text-white hover:text-pink-400 transition group">
-                <i class="fab fa-facebook text-4xl group-hover:scale-110 transition"></i>
-                <span class="text-lg font-medium">Baila&Burn</span>
-            </a>
-            <a href="https://tiktok.com/@bailaburn1" target="_blank" class="flex items-center gap-3 text-white hover:text-pink-400 transition group">
-                <i class="fab fa-tiktok text-4xl group-hover:scale-110 transition"></i>
-                <span class="text-lg font-medium">@bailaburn1</span>
-            </a>
-        </div>
-    </section>
-
-    <!-- ABOUT US, INSTRUCTORA, COMMUNITY, VIDEO, SCHEDULE se mantienen igual (no los copio aquí para ahorrar espacio) -->
-
-    <!-- PRICES -->
-    <section id="prices" class="py-20 bg-zinc-950">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold mb-4">Choose Your Option</h2>
-            <p class="text-pink-400 mb-12">Pay easily with Revolut</p>
-
-            <div class="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
-                <div class="bg-zinc-900 border border-pink-600 rounded-3xl p-10">
-                    <p class="text-pink-400 uppercase tracking-widest text-sm">Single Class</p>
-                    <p class="text-6xl font-black my-6">€12</p>
-                    <a href="https://revolut.me/licelppof" target="_blank" 
-                       class="block bg-pink-600 hover:bg-pink-500 py-5 rounded-2xl font-bold text-lg">Pay €12</a>
-                </div>
-
-                <div class="bg-zinc-900 border-2 border-yellow-400 rounded-3xl p-10 relative">
-                    <div class="absolute -top-4 right-8 bg-yellow-400 text-black text-xs font-bold px-6 py-1 rounded-full">BEST VALUE</div>
-                    <p class="text-pink-400 uppercase tracking-widest text-sm">Pack of 6 Classes</p>
-                    <p class="text-6xl font-black my-6">€60</p>
-                    <a href="https://revolut.me/licelppof" target="_blank" 
-                       class="block bg-pink-600 hover:bg-pink-500 py-5 rounded-2xl font-bold text-lg">Pay €60</a>
-                </div>
+<!-- NAV -->
+<nav class="bg-black/95 backdrop-blur-md border-b border-white/10 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-5">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+            <div class="text-3xl font-black tracking-tighter text-pink-500">
+                BAILA & BURN
             </div>
 
-            <div class="mt-16">
-                <button onclick="showReservationModal()" 
-                        class="inline-block bg-white text-black font-bold px-12 py-6 rounded-full text-xl hover:bg-pink-500 hover:text-white transition shadow-2xl">
-                    RESERVE YOUR SPOT
-                </button>
+            <div class="flex items-center gap-8 text-sm font-medium">
+                <a href="#about" class="hover:text-pink-400 transition">About Us</a>
+                <a href="#instructora" class="hover:text-pink-400 transition">Instructor</a>
+                <a href="#prices" class="hover:text-pink-400 transition">Prices</a>
+                <a href="#contact" class="hover:text-pink-400 transition">Contact</a>
             </div>
 
-            <p class="mt-12 text-gray-400">
-                After payment, you can also send WhatsApp to <strong>087 607 1392</strong>
-            </p>
-        </div>
-    </section>
-
-    <!-- RESERVATION MODAL - TODO EN INGLÉS -->
-    <div id="reservationModal" class="hidden fixed inset-0 bg-black/80 flex items-center justify-center z-[100]">
-        <div class="bg-zinc-900 rounded-3xl p-8 max-w-lg w-full mx-4">
-            <h3 class="text-3xl font-bold text-pink-400 mb-6 text-center">Reserve Your Spot</h3>
-            
-            <form action="https://formspree.io/f/TU_ENDPOINT_AQUI" method="POST" id="reservationForm">
-                <div class="grid grid-cols-2 gap-4">
-                    <input type="text" name="name" placeholder="First Name" required
-                           class="bg-zinc-800 border border-zinc-700 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-pink-500">
-                    <input type="text" name="lastname" placeholder="Last Name" required
-                           class="bg-zinc-800 border border-zinc-700 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-pink-500">
-                </div>
-
-                <input type="tel" name="phone" placeholder="Phone (WhatsApp)" required
-                       class="mt-4 w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-pink-500">
-
-                <input type="text" name="first_class" placeholder="Preferred date for first class (e.g.: April 17)" 
-                       class="mt-4 w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-pink-500">
-
-                <textarea name="message" rows="3" placeholder="Any additional comments? (optional)"
-                          class="mt-4 w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-pink-500"></textarea>
-
-                <div class="flex gap-4 mt-8">
-                    <button type="button" onclick="hideReservationModal()"
-                            class="flex-1 py-4 border border-zinc-600 rounded-2xl font-medium hover:bg-zinc-800 transition">
-                        Cancel
-                    </button>
-                    <button type="submit"
-                            class="flex-1 bg-pink-600 hover:bg-pink-500 py-4 rounded-2xl font-bold transition">
-                        Send Reservation
-                    </button>
-                </div>
-            </form>
+            <button onclick="showReservationModal()" 
+                    class="inline-block bg-white text-black font-bold px-8 py-4 rounded-full text-lg hover:bg-pink-500 hover:text-white transition shadow-xl">
+                RESERVE YOUR SPOT
+            </button>
         </div>
     </div>
+</nav>
 
-    <!-- Script -->
-    <script>
-        function showReservationModal() {
-            document.getElementById('reservationModal').classList.remove('hidden');
-        }
+<!-- HERO (sin cambios) -->
 
-        function hideReservationModal() {
-            document.getElementById('reservationModal').classList.add('hidden');
-        }
+<!-- ABOUT US -->
+<section id="about" class="py-20 bg-zinc-900">
+    ... (tu contenido actual)
+</section>
 
-        document.getElementById('reservationForm').addEventListener('submit', function(e) {
-            setTimeout(() => {
-                alert('✅ Reservation sent successfully! Licel will contact you soon via WhatsApp.');
-                hideReservationModal();
-                this.reset();
-            }, 700);
-        });
-    </script>
+<!-- INSTRUCTORA -->
+<section id="instructora" class="py-16 bg-black">
+    ... (tu contenido actual)
+</section>
 
-    <!-- CONTACT y Footer se mantienen igual (puedes copiarlos del código anterior) -->
+<!-- PRICES -->
+<section id="prices" class="py-20 bg-zinc-950">
+    ... (tu contenido actual)
+</section>
 
-</body>
-</html>
+<!-- CONTACT -->
+<section id="contact" class="py-20 bg-black">
+    ... (tu contenido actual)
+</section>
