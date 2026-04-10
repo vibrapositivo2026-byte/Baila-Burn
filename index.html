@@ -26,11 +26,10 @@
 </head>
 <body class="bg-zinc-950 text-white">
 
-    <!-- NAV (sin logo) -->
+    <!-- NAV -->
     <nav class="bg-black/95 backdrop-blur-md border-b border-white/10 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 py-5">
             <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
-                
                 <div class="text-3xl font-black tracking-tighter text-pink-500">
                     BAILA & BURN
                 </div>
@@ -50,11 +49,10 @@
         </div>
     </nav>
 
-    <!-- HERO (sin logo) -->
+    <!-- HERO -->
     <section class="hero-bg h-screen flex items-center relative">
         <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/70"></div>
         
-        <!-- Texto principal -->
         <div class="absolute bottom-32 left-1/2 transform -translate-x-1/2 text-center z-10 px-6">
             <p class="text-pink-400 uppercase tracking-[4px] text-base mb-2">LUCAN • EVERY THURSDAY 7:30PM</p>
             <h1 class="text-6xl md:text-7xl font-black tracking-tighter leading-none text-white mb-4">BAILA & BURN</h1>
@@ -63,7 +61,6 @@
             </p>
         </div>
 
-        <!-- Redes Sociales -->
         <div class="absolute top-12 right-12 flex flex-col gap-6 z-20">
             <a href="https://instagram.com/baila.burn" target="_blank" class="flex items-center gap-3 text-white hover:text-pink-400 transition group">
                 <i class="fab fa-instagram text-4xl group-hover:scale-110 transition"></i>
@@ -94,23 +91,34 @@
                     Our mission is simple: make fitness fun. Every Thursday evening, we transform Esker ETNS into a dance floor 
                     where you can sweat, smile, and let loose. No choreography experience needed — just bring your energy and we'll bring the music.
                 </p>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 text-center">
-                    <div><span class="text-4xl">🔥</span><p class="font-semibold mt-3">Burn Calories</p></div>
-                    <div><span class="text-4xl">💃</span><p class="font-semibold mt-3">Latin Rhythms</p></div>
-                    <div><span class="text-4xl">🎉</span><p class="font-semibold mt-3">Pure Fun</p></div>
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- INSTRUCTORA -->
+    <!-- INSTRUCTORA - Con descripción nueva -->
     <section id="instructora" class="py-16 bg-black">
         <div class="max-w-5xl mx-auto px-6 text-center">
             <p class="text-pink-400 uppercase tracking-widest text-sm mb-4">Meet Your Instructor</p>
+            
             <img src="instructora.jpeg" 
                  alt="Baila & Burn Instructor" 
-                 class="instructora-card mx-auto rounded-3xl w-full max-w-md">
-            <h2 class="text-4xl font-bold mt-8">Dance with energy and joy</h2>
+                 class="instructora-card mx-auto rounded-3xl w-full max-w-md mb-8">
+
+            <h2 class="text-4xl font-bold mb-4">Dance with energy and joy</h2>
+            
+            <div class="max-w-2xl mx-auto text-gray-300 text-lg leading-relaxed">
+                <p>
+                    Our instructor began her dance journey in 2009 at the prestigious OG Academy in Venezuela. 
+                    Since then, dance has been her greatest passion. After years of training and performing, 
+                    she decided to share her love for Latin rhythms by creating <strong>Baila & Burn</strong> — 
+                    a fun, energetic and welcoming space where anyone can move, sweat and feel alive through salsa, 
+                    reggaeton, cumbia and merengue.
+                </p>
+                <p class="mt-4">
+                    Whether you're a complete beginner or an experienced dancer, she brings the perfect mix of technique, 
+                    motivation and good vibes to every class.
+                </p>
+            </div>
         </div>
     </section>
 
@@ -149,25 +157,22 @@
         </div>
     </section>
 
-    <!-- PRICES -->
+    <!-- PRICES - Solo Single y Pack of 6 -->
     <section id="prices" class="py-20 bg-zinc-950">
         <div class="max-w-4xl mx-auto px-6 text-center">
             <h2 class="text-4xl font-bold mb-4">Choose Your Option</h2>
             <p class="text-pink-400 mb-12">Pay easily with Revolut</p>
 
-            <div class="grid md:grid-cols-3 gap-8">
+            <div class="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+                <!-- Single Class -->
                 <div class="bg-zinc-900 border border-pink-600 rounded-3xl p-10">
                     <p class="text-pink-400 uppercase tracking-widest text-sm">Single Class</p>
                     <p class="text-6xl font-black my-6">€12</p>
                     <a href="https://revolut.me/licelppof" target="_blank" 
                        class="block bg-pink-600 hover:bg-pink-500 py-5 rounded-2xl font-bold text-lg">Pay €12</a>
                 </div>
-                <div class="bg-zinc-900 border border-pink-600 rounded-3xl p-10">
-                    <p class="text-pink-400 uppercase tracking-widest text-sm">Pack of 4 Classes</p>
-                    <p class="text-6xl font-black my-6">€45</p>
-                    <a href="https://revolut.me/licelppof" target="_blank" 
-                       class="block bg-pink-600 hover:bg-pink-500 py-5 rounded-2xl font-bold text-lg">Pay €45</a>
-                </div>
+
+                <!-- Pack of 6 Classes - Best Value -->
                 <div class="bg-zinc-900 border-2 border-yellow-400 rounded-3xl p-10 relative">
                     <div class="absolute -top-4 right-8 bg-yellow-400 text-black text-xs font-bold px-6 py-1 rounded-full">BEST VALUE</div>
                     <p class="text-pink-400 uppercase tracking-widest text-sm">Pack of 6 Classes</p>
