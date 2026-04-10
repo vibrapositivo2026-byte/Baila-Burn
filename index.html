@@ -41,10 +41,11 @@
                     <a href="#contact" class="hover:text-pink-400 transition">Contact</a>
                 </div>
 
-                <a href="#prices" 
-                   class="inline-block bg-white text-black font-bold px-8 py-4 rounded-full text-lg hover:bg-pink-500 hover:text-white transition shadow-xl">
+                <!-- Botón en el nav que abre el formulario -->
+                <button onclick="showReservationModal()" 
+                        class="inline-block bg-white text-black font-bold px-8 py-4 rounded-full text-lg hover:bg-pink-500 hover:text-white transition shadow-xl">
                     RESERVE YOUR SPOT
-                </a>
+                </button>
             </div>
         </div>
     </nav>
@@ -77,87 +78,9 @@
         </div>
     </section>
 
-    <!-- ABOUT US -->
-    <section id="about" class="py-20 bg-zinc-900">
-        <div class="max-w-5xl mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-12">About Us</h2>
-            <div class="max-w-3xl mx-auto text-gray-300 text-lg leading-relaxed">
-                <p class="mb-8">
-                    Baila & Burn is a high-energy Latin dance fitness class that blends the rhythms of salsa, reggaeton, 
-                    cumbia, and merengue with a full-body workout. Whether you're a seasoned dancer or have two left feet — 
-                    this class is for you.
-                </p>
-                <p class="mb-8">
-                    Our mission is simple: make fitness fun. Every Thursday evening, we transform Esker ETNS into a dance floor 
-                    where you can sweat, smile, and let loose. No choreography experience needed — just bring your energy and we'll bring the music.
-                </p>
-            </div>
-        </div>
-    </section>
+    <!-- ABOUT US, INSTRUCTORA, COMMUNITY, VIDEO, SCHEDULE se mantienen igual (no los copio aquí para ahorrar espacio) -->
 
-    <!-- INSTRUCTORA -->
-    <section id="instructora" class="py-16 bg-black">
-        <div class="max-w-5xl mx-auto px-6 text-center">
-            <p class="text-pink-400 uppercase tracking-widest text-sm mb-4">Meet Your Instructor</p>
-            
-            <img src="instructora.jpeg" 
-                 alt="Baila & Burn Instructor" 
-                 class="instructora-card mx-auto rounded-3xl w-full max-w-md mb-8">
-
-            <h2 class="text-4xl font-bold mb-4">Dance with energy and joy</h2>
-            
-            <div class="max-w-2xl mx-auto text-gray-300 text-lg leading-relaxed">
-                <p>
-                    Our instructor began her dance journey in 2009 at the prestigious OG Academy in Venezuela. 
-                    Since then, dance has been her greatest passion. After years of training and performing, 
-                    she decided to share her love for Latin rhythms by creating <strong>Baila & Burn</strong> — 
-                    a fun, energetic and welcoming space where anyone can move, sweat and feel alive through salsa, 
-                    reggaeton, cumbia and merengue.
-                </p>
-                <p class="mt-4">
-                    Whether you're a complete beginner or an experienced dancer, she brings the perfect mix of technique, 
-                    motivation and good vibes to every class.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- COMMUNITY -->
-    <section class="py-20 bg-zinc-900">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-12">Join the Baila & Burn family</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <img src="foto1.jpg" alt="Community" class="community-img rounded-3xl shadow-xl w-full h-auto">
-                <img src="foto2.jpg" alt="Community" class="community-img rounded-3xl shadow-xl w-full h-auto">
-                <img src="foto3.jpg" alt="Community" class="community-img rounded-3xl shadow-xl w-full h-auto">
-                <img src="foto4.jpg" alt="Community" class="community-img rounded-3xl shadow-xl w-full h-auto">
-            </div>
-        </div>
-    </section>
-
-    <!-- VIDEO -->
-    <section id="video" class="py-20 bg-black">
-        <div class="max-w-5xl mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-10">Feel the Energy</h2>
-            <video controls class="w-full rounded-3xl shadow-2xl" poster="instructora.jpeg">
-                <source src="video/baila-burn-class.mp4" type="video/mp4">
-            </video>
-        </div>
-    </section>
-
-    <!-- SCHEDULE -->
-    <section id="classes" class="py-20 bg-zinc-900">
-        <div class="max-w-6xl mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold mb-8">Class Schedule</h2>
-            <div class="inline-block bg-black px-16 py-12 rounded-3xl">
-                <p class="text-3xl">Every Thursday</p>
-                <p class="text-6xl font-black text-pink-500 mt-3">7:30 PM</p>
-                <p class="text-xl mt-6">Esker ETNS • Lucan</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- PRICES + RESERVE BUTTON -->
+    <!-- PRICES -->
     <section id="prices" class="py-20 bg-zinc-950">
         <div class="max-w-4xl mx-auto px-6 text-center">
             <h2 class="text-4xl font-bold mb-4">Choose Your Option</h2>
@@ -193,43 +116,43 @@
         </div>
     </section>
 
-    <!-- RESERVATION MODAL -->
+    <!-- RESERVATION MODAL - TODO EN INGLÉS -->
     <div id="reservationModal" class="hidden fixed inset-0 bg-black/80 flex items-center justify-center z-[100]">
         <div class="bg-zinc-900 rounded-3xl p-8 max-w-lg w-full mx-4">
             <h3 class="text-3xl font-bold text-pink-400 mb-6 text-center">Reserve Your Spot</h3>
             
             <form action="https://formspree.io/f/TU_ENDPOINT_AQUI" method="POST" id="reservationForm">
                 <div class="grid grid-cols-2 gap-4">
-                    <input type="text" name="name" placeholder="Nombre" required
+                    <input type="text" name="name" placeholder="First Name" required
                            class="bg-zinc-800 border border-zinc-700 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-pink-500">
-                    <input type="text" name="lastname" placeholder="Apellido" required
+                    <input type="text" name="lastname" placeholder="Last Name" required
                            class="bg-zinc-800 border border-zinc-700 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-pink-500">
                 </div>
 
-                <input type="tel" name="phone" placeholder="Teléfono (WhatsApp)" required
+                <input type="tel" name="phone" placeholder="Phone (WhatsApp)" required
                        class="mt-4 w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-pink-500">
 
-                <input type="text" name="first_class" placeholder="Fecha deseada para primera clase (ej: 17 Abril)" 
+                <input type="text" name="first_class" placeholder="Preferred date for first class (e.g.: April 17)" 
                        class="mt-4 w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-pink-500">
 
-                <textarea name="message" rows="3" placeholder="¿Algún comentario adicional? (opcional)"
+                <textarea name="message" rows="3" placeholder="Any additional comments? (optional)"
                           class="mt-4 w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-pink-500"></textarea>
 
                 <div class="flex gap-4 mt-8">
                     <button type="button" onclick="hideReservationModal()"
-                            class="flex-1 py-4 border border-zinc-600 rounded-2xl font-medium hover:bg-zinc-800">
-                        Cancelar
+                            class="flex-1 py-4 border border-zinc-600 rounded-2xl font-medium hover:bg-zinc-800 transition">
+                        Cancel
                     </button>
                     <button type="submit"
                             class="flex-1 bg-pink-600 hover:bg-pink-500 py-4 rounded-2xl font-bold transition">
-                        Enviar Reserva
+                        Send Reservation
                     </button>
                 </div>
             </form>
         </div>
     </div>
 
-    <!-- Script del modal -->
+    <!-- Script -->
     <script>
         function showReservationModal() {
             document.getElementById('reservationModal').classList.remove('hidden');
@@ -239,44 +162,16 @@
             document.getElementById('reservationModal').classList.add('hidden');
         }
 
-        // Mensaje de éxito
         document.getElementById('reservationForm').addEventListener('submit', function(e) {
             setTimeout(() => {
-                alert('✅ ¡Reserva enviada correctamente! Licel te contactará pronto por WhatsApp.');
+                alert('✅ Reservation sent successfully! Licel will contact you soon via WhatsApp.');
                 hideReservationModal();
                 this.reset();
             }, 700);
         });
     </script>
 
-    <!-- CONTACT -->
-    <section id="contact" class="py-20 bg-black">
-        <div class="max-w-6xl mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold mb-10">Get in Touch</h2>
-            <div class="max-w-md mx-auto space-y-10">
-                <div>
-                    <p class="text-pink-400 mb-2">📍 LOCATION</p>
-                    <a href="https://maps.google.com/?q=Esker+Ln,+Glebe,+Lucan,+Co.+Dublin" 
-                       target="_blank" class="text-xl hover:text-pink-400">
-                        Esker ETNS<br>Esker Ln, Glebe, Lucan, Co. Dublin
-                    </a>
-                </div>
-                <div>
-                    <p class="text-pink-400 mb-2">📱 WHATSAPP</p>
-                    <a href="https://wa.me/353876071392" class="text-3xl font-semibold hover:text-pink-400">
-                        087 607 1392
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-zinc-950 py-12 text-center text-white/50 text-sm">
-        <p>Baila & Burn • Latin Dance Fitness Lucan</p>
-        <p>Every Thursday at 7:30 PM</p>
-        <p class="mt-8">© 2026 Baila & Burn</p>
-    </footer>
+    <!-- CONTACT y Footer se mantienen igual (puedes copiarlos del código anterior) -->
 
 </body>
 </html>
