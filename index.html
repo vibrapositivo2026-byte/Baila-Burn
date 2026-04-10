@@ -22,6 +22,11 @@
         .community-img:hover {
             transform: scale(1.05);
         }
+        video {
+            width: 100%;
+            max-height: 600px;
+            object-fit: contain;
+        }
     </style>
 </head>
 <body class="bg-zinc-950 text-white">
@@ -128,14 +133,16 @@
         </div>
     </section>
 
-    <!-- VIDEO - CORREGIDO -->
+    <!-- VIDEO - VERSIÓN CORREGIDA -->
     <section id="video" class="py-20 bg-black">
         <div class="max-w-5xl mx-auto px-6">
             <h2 class="text-4xl font-bold text-center mb-10">Feel the Energy</h2>
-            <video controls class="w-full rounded-3xl shadow-2xl" poster="instructora.jpeg" preload="metadata">
-                <source src="video/video.mp4" type="video/mp4">
-                Tu navegador no soporta el vídeo.
-            </video>
+            <div class="bg-black rounded-3xl overflow-hidden shadow-2xl">
+                <video controls class="w-full" poster="instructora.jpeg" preload="metadata" style="max-height: 620px; object-fit: contain;">
+                    <source src="video/video.mp4" type="video/mp4">
+                    Tu navegador no soporta el vídeo.
+                </video>
+            </div>
         </div>
     </section>
 
