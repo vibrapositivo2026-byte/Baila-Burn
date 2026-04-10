@@ -22,19 +22,20 @@
         .community-img:hover {
             transform: scale(1.05);
         }
+        .hero-logo {
+            filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.6));
+        }
     </style>
 </head>
 <body class="bg-zinc-950 text-white">
 
-    <!-- NAV -->
+    <!-- NAV (sin logo) -->
     <nav class="bg-black/95 backdrop-blur-md border-b border-white/10 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 py-5">
             <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
-                <div class="flex items-center gap-5">
-                    <img src="logo.png" alt="Baila & Burn" class="h-14 w-auto">
-                    <div>
-                        <h1 class="text-4xl font-black tracking-tighter text-pink-500">BAILA & BURN</h1>
-                    </div>
+                
+                <div class="text-2xl font-black tracking-tighter text-pink-500">
+                    BAILA & BURN
                 </div>
 
                 <div class="flex items-center gap-8 text-sm font-medium">
@@ -44,17 +45,24 @@
                     <a href="#contact" class="hover:text-pink-400 transition">Contact</a>
                 </div>
 
-                <a href="#prices" class="inline-block bg-white text-black font-bold px-8 py-4 rounded-full text-lg hover:bg-pink-500 hover:text-white transition shadow-xl">
+                <a href="#prices" 
+                   class="inline-block bg-white text-black font-bold px-8 py-4 rounded-full text-lg hover:bg-pink-500 hover:text-white transition shadow-xl">
                     RESERVE YOUR SPOT
                 </a>
             </div>
         </div>
     </nav>
 
-    <!-- HERO -->
+    <!-- HERO con logo grande encima -->
     <section class="hero-bg h-screen flex items-center relative">
         <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/70"></div>
         
+        <!-- Logo grande en el Hero -->
+        <div class="absolute top-1/3 left-1/2 transform -translate-x-1/2 text-center z-20">
+            <img src="logo.png" alt="Baila & Burn" class="hero-logo w-80 md:w-96 mx-auto mb-6">
+        </div>
+
+        <!-- Texto principal -->
         <div class="absolute bottom-24 left-1/2 transform -translate-x-1/2 text-center z-10 px-6">
             <p class="text-pink-400 uppercase tracking-[4px] text-base mb-2">LUCAN • EVERY THURSDAY 7:30PM</p>
             <h1 class="text-6xl md:text-7xl font-black tracking-tighter leading-none text-white mb-4">BAILA & BURN</h1>
@@ -63,6 +71,7 @@
             </p>
         </div>
 
+        <!-- Redes Sociales -->
         <div class="absolute top-12 right-12 flex flex-col gap-6 z-20">
             <a href="https://instagram.com/baila.burn" target="_blank" class="flex items-center gap-3 text-white hover:text-pink-400 transition group">
                 <i class="fab fa-instagram text-4xl group-hover:scale-110 transition"></i>
@@ -102,11 +111,13 @@
         </div>
     </section>
 
-    <!-- INSTRUCTORA -->
+    <!-- INSTRUCTORA - Ahora con instructora.jpeg -->
     <section id="instructora" class="py-16 bg-black">
         <div class="max-w-5xl mx-auto px-6 text-center">
             <p class="text-pink-400 uppercase tracking-widest text-sm mb-4">Meet Your Instructor</p>
-            <img src="img1.png" alt="Baila & Burn Instructor" class="instructora-card mx-auto rounded-3xl w-full max-w-md">
+            <img src="instructora.jpeg" 
+                 alt="Baila & Burn Instructor" 
+                 class="instructora-card mx-auto rounded-3xl w-full max-w-md">
             <h2 class="text-4xl font-bold mt-8">Dance with energy and joy</h2>
         </div>
     </section>
@@ -128,13 +139,11 @@
     <section id="video" class="py-20 bg-black">
         <div class="max-w-5xl mx-auto px-6">
             <h2 class="text-4xl font-bold text-center mb-10">Feel the Energy</h2>
-            <video controls class="w-full rounded-3xl shadow-2xl" poster="img1.png">
+            <video controls class="w-full rounded-3xl shadow-2xl" poster="instructora.jpeg">
                 <source src="video/baila-burn-class.mp4" type="video/mp4">
             </video>
         </div>
     </section>
-
-    <!-- SCHEDULE, PRICES y CONTACT se mantienen igual (sin cambios) -->
 
     <!-- SCHEDULE -->
     <section id="classes" class="py-20 bg-zinc-900">
@@ -158,18 +167,21 @@
                 <div class="bg-zinc-900 border border-pink-600 rounded-3xl p-10">
                     <p class="text-pink-400 uppercase tracking-widest text-sm">Single Class</p>
                     <p class="text-6xl font-black my-6">€12</p>
-                    <a href="https://revolut.me/licelppof" target="_blank" class="block bg-pink-600 hover:bg-pink-500 py-5 rounded-2xl font-bold text-lg">Pay €12</a>
+                    <a href="https://revolut.me/licelppof" target="_blank" 
+                       class="block bg-pink-600 hover:bg-pink-500 py-5 rounded-2xl font-bold text-lg">Pay €12</a>
                 </div>
                 <div class="bg-zinc-900 border border-pink-600 rounded-3xl p-10">
                     <p class="text-pink-400 uppercase tracking-widest text-sm">Pack of 4 Classes</p>
                     <p class="text-6xl font-black my-6">€45</p>
-                    <a href="https://revolut.me/licelppof" target="_blank" class="block bg-pink-600 hover:bg-pink-500 py-5 rounded-2xl font-bold text-lg">Pay €45</a>
+                    <a href="https://revolut.me/licelppof" target="_blank" 
+                       class="block bg-pink-600 hover:bg-pink-500 py-5 rounded-2xl font-bold text-lg">Pay €45</a>
                 </div>
                 <div class="bg-zinc-900 border-2 border-yellow-400 rounded-3xl p-10 relative">
                     <div class="absolute -top-4 right-8 bg-yellow-400 text-black text-xs font-bold px-6 py-1 rounded-full">BEST VALUE</div>
                     <p class="text-pink-400 uppercase tracking-widest text-sm">Pack of 6 Classes</p>
                     <p class="text-6xl font-black my-6">€60</p>
-                    <a href="https://revolut.me/licelppof" target="_blank" class="block bg-pink-600 hover:bg-pink-500 py-5 rounded-2xl font-bold text-lg">Pay €60</a>
+                    <a href="https://revolut.me/licelppof" target="_blank" 
+                       class="block bg-pink-600 hover:bg-pink-500 py-5 rounded-2xl font-bold text-lg">Pay €60</a>
                 </div>
             </div>
 
@@ -186,7 +198,8 @@
             <div class="max-w-md mx-auto space-y-10">
                 <div>
                     <p class="text-pink-400 mb-2">📍 LOCATION</p>
-                    <a href="https://maps.google.com/?q=Esker+Ln,+Glebe,+Lucan,+Co.+Dublin" target="_blank" class="text-xl hover:text-pink-400">
+                    <a href="https://maps.google.com/?q=Esker+Ln,+Glebe,+Lucan,+Co.+Dublin" 
+                       target="_blank" class="text-xl hover:text-pink-400">
                         Esker ETNS<br>Esker Ln, Glebe, Lucan, Co. Dublin
                     </a>
                 </div>
